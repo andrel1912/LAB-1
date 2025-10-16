@@ -25,7 +25,7 @@ for namn, sekvens in sekvenser:
     print()
 
     # Diagramet för sekvenserna
-    plt.bar(baser.keys(), baser.values(), color = "b", edgecolor="black")
+    plt.bar(baser.keys(), baser.values(), color = "r", edgecolor="black")
     plt.title (f"DNA-analys: {namn}")
     plt.xlabel("Bas")
     plt.ylabel("Antal")

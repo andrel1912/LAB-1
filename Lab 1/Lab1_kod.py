@@ -14,4 +14,11 @@ with open(filnamn, encoding="utf-8") as f:
     # Analyserar sekvenserna
     for namn, sekvens in sekvenser:
         # Räknar baser
-        baser = 
+        baser = {b: sekvens.count(b) for b in "ATCG"}
+
+    # Skriver ut resultat för sekvenserna
+    
+    print(f"Sekvens: {namn}/n Totalt antal baser: {sum(baser.values())}")
+    for b, antal in baser.items ():
+        print(f" {b}: {antal}")
+    print()

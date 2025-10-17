@@ -12,7 +12,7 @@ with open(filnamn, encoding="utf-8") as f:
 
     print ("\nResultat av DNA-analys\n")
 
-    # Analyserar sekvenserna
+    # Analyserar sekvensexrna
 for namn, sekvens in sekvenser:
         
     baser = {b: sekvens.count(b) for b in "ATCG"}

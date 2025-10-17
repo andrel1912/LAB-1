@@ -1,14 +1,35 @@
 import matplotlib.pyplot as plt
-
+import matplotlib
+matplotlib.use('TkAgg')
 # Huvudprogrammet (Man skriver in filen du vill ska läsas)
 
 filnamn = input("Ange filnamn:")
 
 # Läser in dna-filen 
 
-with open(filnamn, encoding="utf-8") as f:
-    rader = [rad.strip() for rad in f if rad.strip()] # Den här delen är till för att ta bort tomma rader
-    sekvenser = [(rader[i][1:], rader[i+1].upper()) for i in range(0, len(rader), 2)]
+with open(filnamn, encoding='utf-8') as f:
+    sekvenser = []
+    namn = ""
+    sekvens = ""
+
+    for rad in f:
+        rad = rad.strip()
+        if not rad:
+            continue # hoppa över tomma
+        
+        if rad.startswith(">"):
+            if namn != "":
+                sekvenser.append((namn, sekvens.upper()))
+            namn = rad[1:]
+            sekvens = ""
+        else:
+            sekvens += rad # lägg till raden i sekvensen
+
+
+    if namn != "":
+        sekvenser.append((namn, sekvens.upper()))
+
+                    
 
     print ("\nResultat av DNA-analys\n")
 

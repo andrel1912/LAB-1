@@ -32,11 +32,3 @@ for namn, sekvens in sekvenser:
     plt.show()
 
 print("Analys Klar")
-
-""" 
-HJÄLPMEDEL JAG ANVÄNT MIG AV:
-
-- Har använt mig av kursmaterialet vi gått igenom för att göra uppgiften
-
-- https://wwww.youtube.com/watch?v=UBZz6Hh8mY&t=23s: Den här videon hjälpte mig lite grann med chartsen
-""" 
